@@ -1,0 +1,27 @@
+//document.addEventListener("DOMContentloaded", )
+(function(){
+    var counter = 0;
+    var names = ["Yaakov", "John", "Jen", "Jason", "Paul", 
+        "Frank", "Larry", "Paula", "Laura", "Jim"];
+    for (var name in names) {
+
+        var new_par = document.createElement("p");
+        var par_id = "new_par" + counter;
+        new_par.id = par_id; 
+        var greeter = document.getElementById("greeter");
+        greeter.appendChild(new_par);
+
+        var firstChar = names[name].charAt(0).toLowerCase();
+
+        if (firstChar === 'j') {
+            byeSpeaker.speak(names[name], par_id);
+
+
+        } else {
+            helloSpeaker.speak(names[name], par_id);  
+    }
+    counter++;
+    }
+
+})();
+
